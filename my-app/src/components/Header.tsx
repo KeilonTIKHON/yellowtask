@@ -3,7 +3,7 @@ import "../styles/Header.css";
 
 const Header: React.FC = () => {
   return (
-    <header className="header">
+    <header className="Rectangle">
       <div className="logo">LOGOBEAR</div>
       <nav>
         <a href="/jogs">JOGS</a>

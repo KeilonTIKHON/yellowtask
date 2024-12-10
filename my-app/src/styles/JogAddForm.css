@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'SF UI Text Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SF UI Text Regular'), url('SFUIText-Regular.woff') format('woff');
+}
+.formwrapper{
+    position: absolute;
+    top:0px;
+    background-color: white;
+    z-index: 10;
+}
+
+.Rectangle-3 {
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 503px;
+    height: 379px;
+    border-radius: 44px;
+    background-color: #7ed321;
+    position: absolute;
+    left: 32.567vw;
+    top: 234px;
+}
+
+.Form1 {
+    width: 236px;
+    height: 31px;
+
+    border-radius: 7px;
+    border: solid 1px #979797;
+    background-color: white;
+}
+
+.Form2 {
+    width: 236px;
+    height: 31px;
+
+    border-radius: 7px;
+    border: solid 1px #979797;
+    background-color: white;
+}
+
+.Form3 {
+    width: 236px;
+    height: 31px;
+
+    border-radius: 7px;
+    border: solid 1px #979797;
+    background-color: white;
+}
+
+.jog-form-field {
+    margin: 0px 0px 25px 0px;
+    width: 326px;
+    height: 31px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-button {
+    position: fixed;
+    top: 90.234375vh;
+    left: 93.0555556vw;
+    width: 60px;
+    height: 60px;
+    background-image: url('../images/add@3x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+button {
+    border: none;
+}
+
+.close-button {
+    width: 27px;
+    height: 27px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url('../images/cancel@3x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 0px;
+    position: absolute;
+    left: 449px;
+    top: 24px;
+}
+
+.allForms {
+    position: relative;
+    top: 101px;
+    left: 88px;
+
+}
+
+.SaveBtn {
+    width: 320px;
+    height: 42px;
+    position: absolute;
+    top: 290px;
+    left: 91px;
+    border-radius: 25.2px;
+    border: solid 2px white;
+    background-color: #7ed321;
+    text-align: center;
+    font-family: 'SF UI Text Regular';
+    font-size: 12.6px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: white;
+}
+
+.formtext {
+    box-sizing: border-box;
+    padding: 5px 0px 0px 0px;
+    font-family: 'SF UI Text Regular';
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}

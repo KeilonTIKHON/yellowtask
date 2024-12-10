@@ -10,14 +10,14 @@ interface Jog {
 }
 
 interface JogListProps {
-  jogs: Jog[];
+  jogs?: {jogs:Jog[]};
 }
 
 const JogList: React.FC<JogListProps> = ({ jogs }) => {
-    console.log(jogs[0])
+    console.log(jogs)
   return (
     <div className="jog-list">
-      {jogs[0]===undefined ? <div>Hi</div>: jogs.map((jog) => (
+      {jogs===undefined ? <div>Hi</div>: jogs.jogs.map((jog) => (
         <div className="jog-item" key={jog.id}>
           <p>Date: {jog.date}</p>
           <p>Speed: {jog.speed} km/h</p>

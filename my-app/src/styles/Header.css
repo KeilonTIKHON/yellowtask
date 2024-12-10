@@ -1,0 +1,7 @@
+.Rectangle {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 116px;
+    padding: 30px 36px 30px 37px;
+    background-color: #7ed321;
+  }
