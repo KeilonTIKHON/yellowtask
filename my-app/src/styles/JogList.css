@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'SF UI Text Medium';
+    font-style: normal;
+    font-weight: medium;
+    src:url('SFUIText-Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'SF UI Text Regular';
+    font-style: normal;
+    font-weight: normal;
+    src:url('SFUIText-Regular.woff') format('woff');
+}
+input[type=date]:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+}
+
+input[type=date]:focus::-webkit-datetime-edit {
+    color: gray !important;
+}
+
+p {
+    padding: 0px;
+    margin: 0px;
+}
+
+.listcont {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding-left: 40.9027778vw;
+    justify-content: center;
+}
+
+.jog-item {
+    height: 97px;
+    margin-bottom: 78.336px;
+    display: flex;
+    
+    
+}
+
+.runimage {
+    
+    box-sizing: border-box;
+    width: 97px;
+    height: 97px;
+    background-image: url('../images/icon@3x.png');
+    background-repeat: no-repeat;
+    background-size: 87px 87px;
+    background-position: center;
+    margin-right: 36px;
+}
+
+.stats {
+    display: inline-block;
+}
+
+.jogtext {
+    margin: 9px 0px 12px 0px;
+    display: flex;
+    justify-content: left;
+}
+
+.characteristic {
+
+    height: 16px;
+    font-family: 'SF UI Text Medium';
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.charvalues {
+    height: 16px;
+    margin-left: 4px;
+    font-family: 'SF UI Text Medium';
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: gray;
+}
+
+.date {
+    width: 73px;
+    height: 16px;
+    
+    font-family: 'SF UI Text Regular';
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: gray;
+}
+
+.pic {}

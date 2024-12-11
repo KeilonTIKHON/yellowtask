@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'SF UI Text Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('SFUIText-Regular.woff') format('woff');
+}
+input[type=date]:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+}
+
+input[type=date]:focus::-webkit-datetime-edit {
+    color: gray !important;
+}
+
+.filter-wraper {
+    box-sizing: border-box;
+    display: flex;
+    padding-bottom: 63px;
+    justify-content: center;
+}
+
+.filter-panel {
+    width: 381px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.DateFromToText {
+    text-align: left;
+    margin-top:8px;
+    margin-right: 15px;
+    width: 61px;
+    height: 15px;
+    font-family: 'SF UI Text Regular';
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: gray;
+}
+.DateFromToText2 {
+    text-align: left;
+    margin-top:8px;
+    margin-right: 15px;
+    width: 45px;
+    height: 15px;
+    font-family: 'SF UI Text Regular';
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: gray;
+}
+
+.filterform {
+    box-sizing: border-box;
+    padding: 0px 0px 0px 2px;
+    width: 100px;
+    height: 31px;
+    border-radius: 11px;
+    border: solid 1px #979797;
+    background-color: white;
+    font-family: 'SF UI Text Regular';
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: gray;
+}
+.filterlabel{
+    height: 31px;
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+}

@@ -5,11 +5,19 @@
     src: local('SF UI Text Regular'), url('SFUIText-Regular.woff') format('woff');
 }
 
+
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
 
     display: none;
     -webkit-appearance: none;
+}
+input[type=date]:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+}
+
+input[type=date]:focus::-webkit-datetime-edit {
+    color: gray !important;
 }
 
 

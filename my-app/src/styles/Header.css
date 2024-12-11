@@ -1,7 +1,112 @@
+@font-face {
+  font-family: 'SF UI Text Bold';
+  font-style: normal;
+  font-weight: bold;
+  src: url('SFUIText-Bold.woff') format('woff');
+}
 .Rectangle {
-    box-sizing: border-box;
-    width: 100vw;
-    height: 116px;
-    padding: 30px 36px 30px 37px;
-    background-color: #7ed321;
-  }
+  box-sizing: border-box;
+  width: 100vw;
+  height: 116px;
+  padding: 30px 36px 30px 37px;
+  background-color: #7ed321;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 147px;
+  height: 56px;
+  background-image: url(../images/logobear@3x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.navmenucont{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  height: 39px;
+}
+.navtext{
+  text-decoration: none;
+  height: 16px;
+  padding-bottom: 4.048px;
+  margin-right: 46px;
+  margin-top:20px;
+  font-family: 'SF UI Text Bold';
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: white;
+}
+.navtext:nth-child(2){
+  margin-right: 45px;
+}
+.navtext:nth-child(3){
+  margin-right: 0px;
+}
+.navtextunder{
+  position: relative;
+    text-decoration: none;
+    height: 16px;
+    margin-right: 46px;
+    margin-top:20px;
+    font-family: 'SF UI Text Bold';
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: white;
+
+}
+.navtextunder:nth-child(2){
+  margin-right: 45px;
+}
+.navtextunder:nth-child(3){
+  margin-right: 0px;
+}  
+
+.navtextunder:after {
+  display: inline-block;
+  content: "";
+  background: white;
+  position:absolute;
+  bottom: -4.048px;
+  left: -0.8px;
+  height: 2px;
+  width: 41.8px;
+  border-radius: 0.5px;
+}
+.navtextunder:nth-child(2):after{
+  left: -3.8px;
+}
+
+.navsortlogo{
+  width: 26px;
+  height: 26px;
+  margin-left:56px;
+  background-image: url(../images/filter@3x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 17px;
+}
+.navsortlogoactive{
+  
+  width: 37px;
+  height: 37px;
+  margin-left:41px;
+  margin-top: 9px;
+  background-image: url(../images/filter-active@3x.png);
+  background-repeat: no-repeat;
+  background-size: 26px 26px;
+  background-position: center;
+  border: solid 2px #62AA14;
+  border-radius: 6px;
+}

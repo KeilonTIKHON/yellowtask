@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import api from '../utils/api';
 import { setAuthToken } from '../utils/api';
 import { useNavigate } from 'react-router-dom';
+import Header from '../components/Header';
 
 const Login: React.FC = () => {
   const [username, setUsername] = useState('');
@@ -34,6 +35,7 @@ const Login: React.FC = () => {
 
   return (
     <div>
+      <Header isfirstpage={true} />
       <h1>Login</h1>
       <input
         type="text"

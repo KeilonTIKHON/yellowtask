@@ -7,14 +7,16 @@ export interface JogFormProps {
     onClose: () => void;
     onSave: (jog: { distance: number; time: number; date: string }) => void;
     initialData?: { distance: number; time: number; date: string, id?:string } | undefined;
+    fetchJogs:Function;
 }
 
-const JogAddForm: React.FC<JogFormProps> = ({ onClose, onSave, initialData }) => {
+const JogAddForm: React.FC<JogFormProps> = ({ onClose, onSave, initialData, fetchJogs }) => {
     
     const [distance, setDistance] = useState(initialData?.distance || '');
     const [time, setTime] = useState(initialData?.time || '');
     const [date, setDate] = useState(initialData?.date.substring(0, 10) || '');
-
+    
+    console.log(onClose)
     const handleSave = async() => { 
         console.log(distance)
         console.log(time)
@@ -34,7 +36,7 @@ const JogAddForm: React.FC<JogFormProps> = ({ onClose, onSave, initialData }) =>
                         headers: { Authorization: `Bearer ${token}` },
                     });
                     console.log(response)
-                    
+                    fetchJogs()
                 }
             
               }catch(err){
@@ -60,7 +62,7 @@ const JogAddForm: React.FC<JogFormProps> = ({ onClose, onSave, initialData }) =>
                         headers: { Authorization: `Bearer ${token}` },
                     });
                     console.log(response)
-                    
+                    fetchJogs()
                 }
             
               }catch{
@@ -82,6 +84,7 @@ const JogAddForm: React.FC<JogFormProps> = ({ onClose, onSave, initialData }) =>
                 <div className="jog-form-field">
                     <label className='formtext'>Distance</label>
                     <input className='Form1'
+                        
                         type="number"
                         value={distance}
                         onChange={(e) => setDistance(e.target.value)}
@@ -91,6 +94,7 @@ const JogAddForm: React.FC<JogFormProps> = ({ onClose, onSave, initialData }) =>
                 <div className="jog-form-field">
                     <label className='formtext'>Time</label>
                     <input className='Form2'
+                        
                         type="number"
                         value={time}
                         onChange={(e) => setTime(e.target.value)}
@@ -100,6 +104,7 @@ const JogAddForm: React.FC<JogFormProps> = ({ onClose, onSave, initialData }) =>
                 <div className="jog-form-field">
                     <label className='formtext'>Date</label>
                     <input className='Form3'
+                        required
                         type="date"
                         value={date}
                         
