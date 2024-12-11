@@ -10,10 +10,11 @@ const JogsPage: React.FC = () => {
     const [jogs, setJogs] = useState<any>([]);
     const [letMeIn, setLetMeIn] = useState(false)
     const [isFormVisible, setFormVisible] = useState(false);
-    const handleAddJog = (newJog: { distance: string; time: string; date: string }) => {
+    const handleAddJog = (newJog: { distance: number; time: number; date: string }) => {
         
         setJogs([...jogs, newJog]);
     };
+    
 
     useEffect(() => {
         const fetchJogs = async () => {
