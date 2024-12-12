@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'SF UI Text Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: url('SFUIText-Bold.woff') format('woff');
+  }
+@font-face {
+    font-family: 'SF UI Text Regular';
+    font-style: normal;
+    font-weight: normal;
+    src:url('SFUIText-Regular.woff') format('woff');
+}
+.nothinghere {
+    width: 249px;
+    height: 697px;
+    position: absolute;
+    left: calc(49.9652778vw - 124.5px)
+}
+
+.sadface {
+    width: 150px;
+    height: 151px;
+    background-image: url(../images/sad-rounded-square-emoticon@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    left: 50px;
+    top: 240px;
+    color:transparent;
+}
+
+.nothingtext {
+    width: 182px;
+    height: 58px;
+    font-family: 'SF UI Text Regular';
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: center;
+    color: #B0B0B0;
+    position: absolute;
+    left:34px;
+    top:438px;
+}
+.addfirst{
+  width: 249px;
+  height: 60px;
+  border-radius: 36px;
+  background: white;
+  border: solid 3px #e990f9;
+  position: absolute;
+  top:637px;
+}
+.addfirsttext{
+  width: 182px;
+  height: 21px;
+  font-family: 'SF UI Text Bold';
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #e990f9;
+  margin-left: 31px;
+}

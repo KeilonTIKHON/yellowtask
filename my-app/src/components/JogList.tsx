@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../styles/JogList.css";
 import JogAddForm from "./JogsAddForm";
 import api from "../utils/api";
+import NothingHere from "./NothingHere";
 
 interface Jog {
   id: number;
@@ -24,7 +25,7 @@ const JogList: React.FC<JogListProps> = ({ jogs, fetchJogs, passprop, passprop2}
   const [editing, setEditing] = useState(false)
   const [savedkey, setSavedkey] = useState<number>()
   const [chosenJog, setChosenJog] = useState<any>()
-  
+  console.log(jogs)
 
 const gotoedit=(jog:any)=>{
   setChosenJog(() => {
@@ -41,31 +42,46 @@ const gotoedit=(jog:any)=>{
 
   }
   return (
-    <div className="jog-list">{editing ?
-      <div>
-        <JogAddForm onClose={() => {
-          passprop2(true)
-          passprop(true)
-          setEditing(false)
-        }} onSave={handleEditJog} initialData={chosenJog} fetchJogs={fetchJogs} />
-      </div>
+    <div>
+      {!jogs?
+      <div>Loading...</div>
       :
-      <div className="listcont">
-        {jogs === undefined || jogs.jogs === undefined ? <div>Loading...</div> : jogs.jogs.map((jog) => (
-           
-          <div className="jog-item" key={jog.id} >
-            <div className="runimage" onClick={() => {gotoedit(jog)}}></div>
-            <div className="stats" onClick={() => {gotoedit(jog)}}>
-              <div className="date"> {jog.date.substring(0, 10).split("-").reverse().join(".")}</div>
-              <div className="jogtext"><p className="characteristic">Speed:</p> <p className="charvalues">{jog.speed}</p></div>
-              <div className="jogtext"><p className="characteristic">Distance:</p> <p className="charvalues">{jog.distance} km</p></div>
-              <div className="jogtext"><p className="characteristic">Time:</p> <p className="charvalues">{jog.time} mins</p></div>
-            </div>
-          </div>
-        ))}
-      </div>}
-
+      <div>
+      {!jogs.jogs?
+      <NothingHere />
+      :
+      <div className="jog-list">{editing ?
+        <div>
+          <JogAddForm onClose={() => {
+            passprop2(true)
+            passprop(true)
+            setEditing(false)
+          }} onSave={handleEditJog} initialData={chosenJog} fetchJogs={fetchJogs} />
+        </div>
+        :
+        <div className="listcont">
+          {jogs === undefined || jogs.jogs === undefined ? <div>Loading...</div> : <div>{
+            
+            jogs.jogs.map((jog) => (
+             
+              <div className="jog-item" key={jog.id} >
+                <div className="runimage" onClick={() => {gotoedit(jog)}}></div>
+                <div className="stats" onClick={() => {gotoedit(jog)}}>
+                  <div className="date"> {jog.date.substring(0, 10).split("-").reverse().join(".")}</div>
+                  <div className="jogtext"><p className="characteristic">Speed:</p> <p className="charvalues">{jog.speed}</p></div>
+                  <div className="jogtext"><p className="characteristic">Distance:</p> <p className="charvalues">{jog.distance} km</p></div>
+                  <div className="jogtext"><p className="characteristic">Time:</p> <p className="charvalues">{jog.time} mins</p></div>
+                </div>
+              </div>
+            ))}</div>}
+        </div>}
+  
+      </div>
+      }
+    </div>}
     </div>
+    
+    
   );
 };
 

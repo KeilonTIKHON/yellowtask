@@ -36,6 +36,7 @@ const JogAddForm: React.FC<JogFormProps> = ({ onClose, onSave, initialData, fetc
                         headers: { Authorization: `Bearer ${token}` },
                     });
                     console.log(response)
+                    onClose()
                     fetchJogs()
                 }
             
@@ -62,11 +63,12 @@ const JogAddForm: React.FC<JogFormProps> = ({ onClose, onSave, initialData, fetc
                         headers: { Authorization: `Bearer ${token}` },
                     });
                     console.log(response)
+                    onClose()
                     fetchJogs()
                 }
             
-              }catch{
-
+              }catch(err){
+                console.log(err)
               }
         } else {
             alert('Please fill out all fields.');

@@ -4,6 +4,7 @@
   font-weight: bold;
   src: url('SFUIText-Bold.woff') format('woff');
 }
+
 .Rectangle {
   box-sizing: border-box;
   width: 100vw;

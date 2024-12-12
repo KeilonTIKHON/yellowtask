@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'SF UI Text Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: url('SFUIText-Bold.woff') format('woff');
+  }
+.wrapper {
+    box-sizing: border-box;
+    width: 503px;
+    height: 379px;
+    position: absolute;
+    top: 323px;
+    left: calc(50.0347222vw - 251.5px);
+    border-radius: 44px;
+    background-color: #e990f9;
+}
+
+.bear {
+    width: 160px;
+    height: 150px;
+    background-image: url('../images/bear-face@3x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    left: 172px;
+    top: 77px;
+}
+
+.letmein {
+    width: 151px;
+    height: 60px;
+    padding: 0px;
+    background: #e990f9;
+    border-radius: 36px;
+    border: solid 3px white;
+    position: absolute;
+    top: 283px;
+    left: 176px;
+}
+
+.letmeintext {
+    width: 83px;
+    height: 21px;
+    font-family: 'SF UI Text Bold';
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: white;
+    position: absolute;
+    left:32px;
+    top:16px;
+}
