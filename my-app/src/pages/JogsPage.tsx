@@ -74,7 +74,7 @@ const JogsPage: React.FC = () => {
                     {!jogs ? <div>Loading...</div>
                         :
                         <div>
-                            {!ishere ? <NothingHere /> : <JogList jogs={filteredJogs} fetchJogs={fetchJogs} passprop={setBtnVisible} isFormVisible={isFormVisible} passprop2={setHeadrVisible} />}
+                            {!ishere ? <NothingHere whenclicked={setFormVisible}/> : <JogList jogs={filteredJogs} fetchJogs={fetchJogs} passprop={setBtnVisible} isFormVisible={isFormVisible} passprop2={setHeadrVisible} />}
                         </div>
                     }
                 </div>
@@ -86,7 +86,7 @@ const JogsPage: React.FC = () => {
             </div>
         )}
 
-            {isFormVisible && jogs.jogs[0] && (
+            {isFormVisible && (
                 <JogAddForm onClose={() => {
                     setFormVisible(false)
                     setHeadrVisible(true)

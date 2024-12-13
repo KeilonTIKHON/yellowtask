@@ -21,7 +21,7 @@ interface JogListProps {
 }
 
 const JogList: React.FC<JogListProps> = ({ jogs, fetchJogs, passprop, passprop2}) => {
-  let smth;
+  
   const [editing, setEditing] = useState(false)
   const [savedkey, setSavedkey] = useState<number>()
   const [chosenJog, setChosenJog] = useState<any>()
@@ -48,7 +48,7 @@ const gotoedit=(jog:any)=>{
       :
       <div>
       {!jogs.jogs?
-      <NothingHere />
+      ""
       :
       <div className="jog-list">{editing ?
         <div>
